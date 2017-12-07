@@ -1,0 +1,77 @@
+/*change font for site*/
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+	background-color: white;
+}
+/*Set height for site*/
+body, html {
+	height: 100%;
+}
+
+.parallax-content {
+	position: relative;
+	overflow: hidden;
+	height: 80vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.parallax {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.parallax:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: -1;
+	background-position: center top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+/*xs to lg*/
+@media(min-width: 769px){
+	.parallax-content {
+		background-image: url(../images/InterviewImage2.svg);
+		}
+	.content {
+		color: white;
+		font-size: 12rem;
+		line-height: 35rem;
+		font-weight: 700;
+		text-align: center;
+		text-shadow: 0 0 1rem gray;
+	}
+}
+
+/*xs to 0*/
+@media(max-width: 768px){
+	.parallax-content .parallax:before {
+		background-image: url(../images/InterviewImage2.svg);
+	}
+	.content {
+		color: white;
+		font-size: 4rem;
+		line-height: 30rem;
+		font-weight: 700;
+		text-align: center;
+		text-shadow: 0 0 1rem gray;
+	}
+}
